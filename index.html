@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Naeim - Professional App & Web Developer | Portfolio 2026</title>
+<meta name="description" content="Professional Android App Developer and Web Developer creating Tool Apps, Islamic Apps, VPN Apps, AI Chatbots, E-commerce Websites and Automation Solutions since 2017."/>
+<link rel="canonical" href="https://naeim.ami.bd/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300f5a0'/%3E%3Cstop offset='100%25' style='stop-color:%2300d9f5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='72' font-family='Arial,sans-serif' font-size='65' font-weight='900' fill='url(%23g)' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e0e0e0;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#111}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#00f5a0,#00d9f5);border-radius:10px}
+a{text-decoration:none;color:inherit}ul{list-style:none}
+.preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:#0a0a0a;display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .6s ease,visibility .6s ease}
+.preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.pre-logo{width:70px;height:70px;margin:0 auto 20px;position:relative}.pre-logo svg{width:100%;height:100%}
+.pre-ring{width:70px;height:70px;border:2px solid rgba(0,245,160,.1);border-top-color:#00f5a0;border-radius:50%;animation:spin .8s linear infinite;position:absolute;top:0;left:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pre-bar{width:180px;height:2px;background:rgba(0,245,160,.1);border-radius:10px;margin:0 auto;overflow:hidden}
+.pre-bar-fill{width:0%;height:100%;background:linear-gradient(90deg,#00f5a0,#00d9f5);border-radius:10px;animation:loadBar 1.2s ease forwards}
+@keyframes loadBar{to{width:100%}}
+.bg-animation{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden}
+.bg-animation .p{position:absolute;width:3px;height:3px;background:rgba(0,245,160,.25);border-radius:50%;animation:floatP 18s infinite linear}
+@keyframes floatP{0%{transform:translateY(100vh);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh);opacity:0}}
+.grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(0,245,160,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,160,.02) 1px,transparent 1px);background-size:60px 60px;z-index:-1}
+.nav{position:fixed;top:0;left:0;width:100%;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;z-index:1000;backdrop-filter:blur(20px);background:rgba(10,10,10,.7);border-bottom:1px solid rgba(0,245,160,.05);transition:all .3s ease}
+.nav.scrolled{padding:10px 5%;background:rgba(10,10,10,.95)}
+.nav-logo{display:flex;align-items:center;gap:8px}.nav-logo svg{width:32px;height:32px}
+.nav-logo-t{font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,#00f5a0,#00d9f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:.88rem;font-weight:500;color:#777;position:relative;padding:4px 0;transition:.3s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,#00f5a0,#00d9f5);transition:.3s}
+.nav-links a:hover,.nav-links a.active-link{color:#00f5a0}.nav-links a:hover::after,.nav-links a.active-link::after{width:100%}
+.nav-cta{padding:8px 22px!important;border:2px solid #00f5a0!important;border-radius:50px!important;color:#00f5a0!important;font-weight:700!important}
+.nav-cta:hover{background:#00f5a0!important;color:#0a0a0a!important}.nav-cta::after{display:none!important}
+.menu-btn{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001}.menu-btn span{width:26px;height:2px;background:#00f5a0;border-radius:2px;transition:.3s}
+.menu-btn.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.menu-btn.active span:nth-child(2){opacity:0}.menu-btn.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 5% 60px}
+.hero-wrap{display:flex;align-items:center;justify-content:space-between;max-width:1200px;width:100%;gap:50px}
+.hero-badge{display:inline-flex;align-items:center;padding:6px 16px;border:1px solid rgba(0,245,160,.25);border-radius:50px;font-size:.8rem;color:#00f5a0;margin-bottom:22px;background:rgba(0,245,160,.04);gap:8px}
+.dot{width:7px;height:7px;background:#00f5a0;border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-h1{font-size:3.2rem;font-weight:900;line-height:1.12;margin-bottom:8px;color:#fff;animation:fadeUp .8s ease .15s both}
+.grad{background:linear-gradient(135deg,#00f5a0,#00d9f5,#7b61ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gradShift 4s ease infinite}
+@keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero-sub{font-size:1.2rem;color:#888;margin-bottom:12px;font-weight:500;animation:fadeUp .8s ease .25s both}
+.typing-w{font-size:1.1rem;color:#00d9f5;margin-bottom:22px;min-height:28px;font-weight:500;animation:fadeUp .8s ease .35s both}
+.cursor{animation:blink .7s infinite;color:#00f5a0}
+.hero-p{font-size:.95rem;color:#777;line-height:1.8;margin-bottom:30px;max-width:500px;animation:fadeUp .8s ease .45s both}
+.hero-btns{display:flex;gap:12px;margin-bottom:35px;animation:fadeUp .8s ease .55s both}
+.btn-p{padding:13px 30px;background:linear-gradient(135deg,#00f5a0,#00d9f5);color:#0a0a0a;border:none;border-radius:50px;font-size:.95rem;font-weight:700;cursor:pointer;transition:.3s;display:inline-flex;align-items:center;gap:6px}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(0,245,160,.3)}
+.btn-o{padding:13px 30px;background:transparent;color:#ddd;border:2px solid #333;border-radius:50px;font-size:.95rem;font-weight:600;cursor:pointer;transition:.3s;display:inline-flex;align-items:center;gap:6px}
+.btn-o:hover{border-color:#00f5a0;color:#00f5a0;transform:translateY(-3px)}
+.hero-stats{display:flex;gap:35px;animation:fadeUp .8s ease .65s both}
+.st-item{text-align:center;position:relative}.st-item:not(:last-child)::after{content:'';position:absolute;right:-18px;top:10%;height:80%;width:1px;background:rgba(255,255,255,.08)}
+.st-num{font-size:2rem;font-weight:900;background:linear-gradient(135deg,#00f5a0,#00d9f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.st-label{font-size:.7rem;color:#555;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;font-weight:600}
+.hero-img{flex:0 0 380px;position:relative;animation:fadeRight .8s ease .4s both}
+.hero-img-wrap{width:320px;height:320px;border-radius:50%;position:relative;margin:0 auto}
+.hero-glow{position:absolute;top:-20px;left:-20px;right:-20px;bottom:-20px;border-radius:50%;background:linear-gradient(135deg,rgba(0,245,160,.12),rgba(0,217,245,.12));filter:blur(35px);animation:glowP 3s ease-in-out infinite}
+@keyframes glowP{0%,100%{opacity:.4}50%{opacity:.7}}
+.hero-avatar{width:320px;height:320px;border-radius:50%;border:3px solid rgba(0,245,160,.25);position:relative;z-index:2;overflow:hidden;background:#111}
+.hero-avatar img{width:100%;height:100%;object-fit:cover}
+.orb{position:absolute;border:1px dashed rgba(0,245,160,.1);border-radius:50%;animation:orbR 22s linear infinite}
+.orb-1{width:400px;height:400px;top:-40px;left:-40px}.orb-2{width:460px;height:460px;top:-70px;left:-70px;animation-direction:reverse;animation-duration:30s}
+@keyframes orbR{to{transform:rotate(360deg)}}
+.orb-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:#00f5a0;box-shadow:0 0 12px rgba(0,245,160,.5)}
+.orb-dot-1{top:0;left:50%;transform:translate(-50%,-50%)}.orb-dot-2{bottom:0;right:0;background:#00d9f5}
+.fc{position:absolute;padding:10px 14px;background:rgba(12,12,12,.95);border:1px solid rgba(0,245,160,.12);border-radius:12px;z-index:3;animation:fcFloat 4s ease-in-out infinite}
+.fc-1{top:8px;right:-35px}.fc-2{bottom:35px;left:-45px;animation-delay:1.5s}.fc-3{bottom:-8px;right:0;animation-delay:3s}
+@keyframes fcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.fc-val{color:#00f5a0;font-weight:700;font-size:.78rem}.fc-label{color:#555;font-size:.6rem;text-transform:uppercase}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.sec{padding:90px 5%}.sec-head{text-align:center;margin-bottom:55px}
+.sec-tag{display:inline-block;padding:5px 18px;background:rgba(0,245,160,.05);border:1px solid rgba(0,245,160,.12);border-radius:50px;font-size:.72rem;color:#00f5a0;text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;font-weight:600}
+.sec-title{font-size:2.3rem;font-weight:900;margin-bottom:12px;color:#fff}
+.sec-title .hl{background:linear-gradient(135deg,#00f5a0,#00d9f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-sub{color:#666;font-size:.95rem;max-width:550px;margin:0 auto;line-height:1.7}
+.sec-line{width:50px;height:3px;background:linear-gradient(90deg,#00f5a0,#00d9f5);margin:18px auto 0;border-radius:10px}
+.marq{padding:14px 0;background:linear-gradient(90deg,rgba(0,245,160,.04),rgba(0,217,245,.04));border-top:1px solid rgba(0,245,160,.08);border-bottom:1px solid rgba(0,245,160,.08);overflow:hidden;white-space:nowrap}
+.marq-inner{display:inline-block;animation:marqScroll 35s linear infinite}.marq-item{display:inline-block;padding:0 35px;font-size:.82rem;color:#555;font-weight:600;text-transform:uppercase;letter-spacing:2px}.marq-item span{color:#00f5a0;margin-right:8px}
+@keyframes marqScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1100px;margin:0 auto;align-items:center}
+.about-content h3{font-size:1.6rem;margin-bottom:18px;color:#fff}.about-content p{color:#888;line-height:1.85;margin-bottom:14px;font-size:.92rem}
+.about-hl{padding:18px 22px;background:rgba(0,245,160,.04);border-left:3px solid #00f5a0;border-radius:0 10px 10px 0;margin:18px 0;font-style:italic;color:#aaa;font-size:.9rem}
+.about-info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.about-info-item{padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:10px}
+.about-info-item .lbl{font-size:.65rem;color:#555;text-transform:uppercase;letter-spacing:1.5px;font-weight:600}.about-info-item .val{color:#00f5a0;font-weight:700;font-size:.9rem}
+.about-cards{display:grid;gap:12px}.acard{padding:20px 18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:14px;display:flex;align-items:center;gap:16px;transition:.35s}
+.acard:hover{border-color:rgba(0,245,160,.25);transform:translateX(6px)}
+.acard-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:rgba(0,245,160,.08)}
+.acard h4{font-size:.9rem;color:#fff}.acard p{font-size:.75rem;color:#666}
+.cnt-sec{padding:50px 5%;background:rgba(0,245,160,.02);border-top:1px solid rgba(0,245,160,.06);border-bottom:1px solid rgba(0,245,160,.06)}
+.cnt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;max-width:1000px;margin:0 auto}
+.cnt-item{text-align:center;padding:25px 12px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:16px}
+.cnt-num{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,#00f5a0,#00d9f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.cnt-label{font-size:.72rem;color:#666;text-transform:uppercase;margin-top:6px}
+.sk-wrap{max-width:1000px;margin:0 auto}.sk-cat{margin-bottom:35px}.sk-cat h3{font-size:1rem;color:#00f5a0;margin-bottom:18px;padding-bottom:8px;border-bottom:1px solid rgba(0,245,160,.08)}
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.sk-item{padding:18px 10px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:12px;text-align:center;transition:.35s}
+.sk-item:hover{border-color:rgba(0,245,160,.35);transform:translateY(-4px)}.sk-name{font-size:.78rem;font-weight:700;color:#ccc}.sk-lvl{font-size:.65rem;color:#00f5a0;margin-top:4px}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.srv-card{padding:30px 25px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:18px;transition:.4s;position:relative}
+.srv-card:hover{border-color:rgba(0,245,160,.2);transform:translateY(-6px)}
+.srv-card h3{font-size:1.1rem;margin-bottom:10px;color:#fff}.srv-card p{color:#777;font-size:.85rem;line-height:1.7;margin-bottom:16px}
+.srv-tags{display:flex;flex-wrap:wrap;gap:5px}.srv-tag{padding:4px 10px;background:rgba(0,245,160,.04);border:1px solid rgba(0,245,160,.08);border-radius:18px;font-size:.68rem;color:#00f5a0}
+.pf-filter{display:flex;justify-content:center;gap:8px;margin-bottom:35px;flex-wrap:wrap}
+.pf-btn{padding:9px 20px;border:1px solid rgba(255,255,255,.06);border-radius:50px;background:transparent;color:#777;font-size:.85rem;cursor:pointer;font-family:inherit}
+.pf-btn.active,.pf-btn:hover{border-color:#00f5a0;color:#00f5a0;background:rgba(0,245,160,.05)}
+.pf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.pf-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:18px;overflow:hidden;transition:.4s}
+.pf-card:hover{border-color:rgba(0,245,160,.25);transform:translateY(-6px)}
+.pf-img{height:190px;background:linear-gradient(135deg,#111,#1a1a2e);display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+.pf-body{padding:22px}.pf-type{display:inline-block;padding:3px 12px;border-radius:18px;font-size:.68rem;font-weight:700;margin-bottom:10px}
+.pf-type.app{background:rgba(0,245,160,.08);color:#00f5a0}.pf-type.web{background:rgba(0,217,245,.08);color:#00d9f5}.pf-type.ai{background:rgba(123,97,255,.08);color:#7b61ff}.pf-type.bot{background:rgba(255,165,0,.08);color:#ffa500}
+.pf-card h3{font-size:1.05rem;color:#fff;margin-bottom:8px}.pf-body p{color:#777;font-size:.82rem;margin-bottom:12px}
+.pf-tech{display:flex;flex-wrap:wrap;gap:5px}.pf-tech span{padding:3px 9px;background:rgba(255,255,255,.03);border-radius:5px;font-size:.68rem;color:#888}
+.tm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.tm-card{padding:28px 22px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:18px}
+.tm-text{color:#999;font-size:.88rem;font-style:italic;margin-bottom:16px}.tm-stars{color:#ffc107;margin-bottom:10px}
+.tl{max-width:750px;margin:0 auto;padding-left:40px;position:relative}
+.tl::before{content:'';position:absolute;left:13px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#00f5a0,#00d9f5,transparent)}
+.tl-item{padding:24px 26px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:14px;margin-bottom:18px;position:relative}
+.tl-item::before{content:'';position:absolute;left:-34px;top:28px;width:12px;height:12px;border-radius:50%;background:#00f5a0;border:3px solid #0a0a0a}
+.tl-year{display:inline-block;padding:3px 12px;background:rgba(0,245,160,.06);border-radius:18px;font-size:.72rem;color:#00f5a0;font-weight:700;margin-bottom:10px}
+.tl-item h4{color:#fff;margin-bottom:6px}.tl-item p{color:#777;font-size:.85rem}
+.faq-wrap{max-width:750px;margin:0 auto}.faq-item{margin-bottom:10px;border:1px solid rgba(255,255,255,.04);border-radius:12px;background:rgba(255,255,255,.02)}
+.faq-q{padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;color:#ddd;font-weight:600}
+.faq-a{max-height:0;overflow:hidden;transition:.4s;padding:0 22px}.faq-item.active .faq-a{max-height:300px;padding:0 22px 18px}.faq-a p{color:#888;font-size:.88rem}
+.cta-sec{padding:70px 5%;text-align:center}.cta-inner{max-width:650px;margin:0 auto}.cta-inner h2{font-size:2.1rem;color:#fff;margin-bottom:14px}.cta-inner p{color:#777;margin-bottom:28px}.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ct-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:45px;max-width:1020px;margin:0 auto}
+.ct-item{display:flex;gap:14px;padding:16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:12px;margin-bottom:12px}
+.ct-form{padding:30px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:18px}
+.fg{margin-bottom:16px}.fg label{display:block;margin-bottom:7px;font-size:.78rem;color:#888;font-weight:600;text-transform:uppercase}
+.fg input,.fg textarea,.fg select{width:100%;padding:12px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;color:#fff;font-size:.92rem;outline:none;font-family:inherit}
+.fg input:focus,.fg textarea:focus{border-color:#00f5a0}.fg textarea{height:120px}.fg select option{background:#1a1a1a}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn-send{width:100%;padding:14px;background:linear-gradient(135deg,#00f5a0,#00d9f5);border:none;border-radius:10px;font-weight:800;cursor:pointer;font-family:inherit}
+.ft{background:linear-gradient(180deg,transparent,rgba(0,245,160,.015))}.ft-main{padding:50px 5% 35px;max-width:1200px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1.2fr;gap:35px}
+.ft-logo-t{font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,#00f5a0,#00d9f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ft-col h4{font-size:.8rem;color:#bbb;margin-bottom:18px;text-transform:uppercase}.ft-col ul li{margin-bottom:8px}.ft-col ul li a{color:#666;font-size:.82rem}.ft-col ul li a:hover{color:#00f5a0}
+.ft-bottom{padding:18px 5%;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,255,255,.05)}
+.btt{position:fixed;bottom:25px;right:25px;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#00f5a0,#00d9f5);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:.3s;z-index:999;border:none;font-weight:800}
+.btt.show{opacity:1;visibility:visible}
+.rv{opacity:0;transform:translateY(35px);transition:.7s}.rv.on{opacity:1;transform:translateY(0)}
+@media(max-width:968px){.hero-wrap{flex-direction:column-reverse;text-align:center}.hero-img-wrap,.hero-avatar{width:260px;height:260px}.orb-1{width:330px;height:330px;top:-35px;left:-35px}.orb-2{width:390px;height:390px;top:-65px;left:-65px}.hero-h1{font-size:2.4rem}.hero-p{margin:0 auto 30px}.hero-btns,.hero-stats{justify-content:center}.about-grid{grid-template-columns:1fr}.ct-grid{grid-template-columns:1fr}.fc{display:none}.cnt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.nav-links{position:fixed;top:0;right:-100%;width:78%;height:100vh;background:rgba(10,10,10,.98);flex-direction:column;padding:90px 30px;gap:18px;transition:.4s}.nav-links.active{right:0}.menu-btn{display:flex}.hero-h1{font-size:1.9rem}.sec-title{font-size:1.7rem}.pf-grid,.srv-grid,.tm-grid{grid-template-columns:1fr}.fg-row{grid-template-columns:1fr}.ft-grid{grid-template-columns:1fr}.ft-bottom{flex-direction:column;text-align:center}}
+@media(max-width:480px){.hero-h1{font-size:1.6rem}.hero-btns{flex-direction:column;align-items:center}.sk-grid{grid-template-columns:repeat(2,1fr)}.hero-img-wrap,.hero-avatar{width:200px;height:200px}}
+</style>
+</head>
+<body>
+
+<div class="preloader" id="preloader"><div style="text-align:center"><div class="pre-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="22" fill="#111"/><text x="50" y="72" font-family="Arial" font-size="62" font-weight="900" fill="#00f5a0" text-anchor="middle">N</text></svg><div class="pre-ring"></div></div><div class="pre-bar"><div class="pre-bar-fill"></div></div></div></div>
+
+<div class="grid-bg"></div><div class="bg-animation" id="bgAnim"></div>
+
+<nav class="nav" id="navbar">
+<a href="#home" class="nav-logo"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="22" fill="#111"/><text x="50" y="72" font-family="Arial" font-size="62" font-weight="900" fill="#00f5a0" text-anchor="middle">N</text></svg><span class="nav-logo-t">NAEIM.</span></a>
+<div class="nav-links" id="navLinks">
+<a href="#home" onclick="closeM()">Home</a><a href="#about" onclick="closeM()">About</a><a href="#skills" onclick="closeM()">Skills</a><a href="#services" onclick="closeM()">Services</a><a href="#projects" onclick="closeM()">Projects</a><a href="#journey" onclick="closeM()">Journey</a><a href="#faq" onclick="closeM()">FAQ</a><a class="nav-cta" href="#contact" onclick="closeM()">Hire Me</a>
+</div>
+<div class="menu-btn" id="menuBtn" onclick="toggleM()"><span></span><span></span><span></span></div>
+</nav>
+
+<section class="hero" id="home"><div class="hero-wrap">
+<div><div class="hero-badge"><span class="dot"></span> Available for Projects</div>
+<h1 class="hero-h1">Hi, I'm <span class="grad">Naeim</span></h1>
+<p class="hero-sub">Professional App & Web Developer</p>
+<div class="typing-w"><span id="typeText"></span><span class="cursor">|</span></div>
+<p class="hero-p">Since 2017, I've been crafting digital solutions. With 5+ years of professional experience, I build high-performance Android apps, modern websites, AI chatbots, and automation systems that help businesses grow.</p>
+<div class="hero-btns"><a href="#projects" class="btn-p">View My Work ↓</a><a href="#contact" class="btn-o">Let's Talk →</a></div>
+<div class="hero-stats">
+<div class="st-item"><div class="st-num" data-target="9">0+</div><div class="st-label">Years Online</div></div>
+<div class="st-item"><div class="st-num" data-target="5">0+</div><div class="st-label">Years Pro</div></div>
+<div class="st-item"><div class="st-num" data-target="50">0+</div><div class="st-label">Projects</div></div>
+<div class="st-item"><div class="st-num" data-target="35">0+</div><div class="st-label">Clients</div></div>
+</div></div>
+<div class="hero-img"><div class="hero-img-wrap"><div class="hero-glow"></div>
+<div class="hero-avatar"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhVDo70FS1dtcIRwVTeFSjaM2tYl3en-vjSFZM-FgvnyOwEglgVA6LBjGJfrB0deiLVxy-V-m82numEJjOJAojVeulu2UTBdDv32P0vGEBdYwYy95ua2DfnFZ0camI7WYPvFDkQ2Duj1gHVhMKd7J4J3nNAzHuOnf9TqOQsecQ0_X0pr0ex5rbdn55FkxLo" alt="Naeim"/></div>
+<div class="orb orb-1"><span class="orb-dot orb-dot-1"></span><span class="orb-dot orb-dot-2"></span></div><div class="orb orb-2"></div>
+</div>
+<div class="fc fc-1"><div>📱</div><div class="fc-label">Specialty</div><div class="fc-val">Android Apps</div></div>
+<div class="fc fc-2"><div>🌐</div><div class="fc-label">Web Dev</div><div class="fc-val">Full Stack</div></div>
+<div class="fc fc-3"><div>🤖</div><div class="fc-label">AI Bots</div><div class="fc-val">Chatbots</div></div>
+</div>
+</div></section>
+
+<div class="marq"><div class="marq-inner">
+<span class="marq-item"><span>★</span> Android Development</span><span class="marq-item"><span>★</span> Web Development</span><span class="marq-item"><span>★</span> AI Chatbot</span><span class="marq-item"><span>★</span> VPN Apps</span><span class="marq-item"><span>★</span> Islamic Apps</span><span class="marq-item"><span>★</span> E-Commerce</span><span class="marq-item"><span>★</span> Automation</span><span class="marq-item"><span>★</span> AI Tools</span><span class="marq-item"><span>★</span> Android Development</span><span class="marq-item"><span>★</span> Web Development</span><span class="marq-item"><span>★</span> AI Chatbot</span><span class="marq-item"><span>★</span> VPN Apps</span><span class="marq-item"><span>★</span> Islamic Apps</span><span class="marq-item"><span>★</span> E-Commerce</span>
+</div></div>
+
+<section class="sec" id="about"><div class="sec-head rv"><span class="sec-tag">About Me</span><h2 class="sec-title">Know More <span class="hl">About Me</span></h2><div class="sec-line"></div></div>
+<div class="about-grid"><div class="about-content rv">
+<h3>Passionate Developer & Problem Solver</h3>
+<p>I started in 2017 with web design and expanded into Android and advanced web tech. Now in 2026, with 5+ years professional experience, I've delivered 50+ projects worldwide.</p>
+<p>I specialize in Tool Apps, Islamic Apps, VPN Apps, AI Chatbots, E-commerce and Automation.</p>
+<div class="about-hl">"I believe in clean code, intuitive UX, and exceeding expectations."</div>
+<div class="about-info">
+<div class="about-info-item"><div class="lbl">Name</div><div class="val">Naeim</div></div>
+<div class="about-info-item"><div class="lbl">Experience</div><div class="val">5+ Years Pro</div></div>
+<div class="about-info-item"><div class="lbl">Since</div><div class="val">2017</div></div>
+<div class="about-info-item"><div class="lbl">Location</div><div class="val">Bangladesh</div></div>
+</div></div>
+<div class="about-cards rv">
+<div class="acard"><div class="acard-icon">📱</div><div><h4>Android Apps</h4><p>Tool, Islamic, VPN Apps</p></div></div>
+<div class="acard"><div class="acard-icon">🌐</div><div><h4>Websites</h4><p>E-commerce, Business, Portfolio</p></div></div>
+<div class="acard"><div class="acard-icon">🤖</div><div><h4>AI Chatbots</h4><p>Smart conversational AI</p></div></div>
+<div class="acard"><div class="acard-icon">⚡</div><div><h4>Automation</h4><p>AI tools & workflows</p></div></div>
+</div></div></section>
+
+<div class="cnt-sec"><div class="cnt-grid">
+<div class="cnt-item rv"><span style="font-size:1.8rem">📱</span><span class="cnt-num" data-target="25">0</span><span class="cnt-label">Apps Built</span></div>
+<div class="cnt-item rv"><span style="font-size:1.8rem">🌐</span><span class="cnt-num" data-target="30">0</span><span class="cnt-label">Websites</span></div>
+<div class="cnt-item rv"><span style="font-size:1.8rem">😊</span><span class="cnt-num" data-target="35">0</span><span class="cnt-label">Happy Clients</span></div>
+<div class="cnt-item rv"><span style="font-size:1.8rem">🤖</span><span class="cnt-num" data-target="10">0</span><span class="cnt-label">AI Projects</span></div>
+</div></div>
+
+<section class="sec" id="skills"><div class="sec-head rv"><span class="sec-tag">Skills</span><h2 class="sec-title">Technologies I <span class="hl">Use</span></h2><div class="sec-line"></div></div>
+<div class="sk-wrap">
+<div class="sk-cat rv"><h3>📱 Mobile</h3><div class="sk-grid">
+<div class="sk-item"><div style="font-size:1.8rem">☕</div><div class="sk-name">Java</div><div class="sk-lvl">Advanced</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">🟣</div><div class="sk-name">Kotlin</div><div class="sk-lvl">Intermediate</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">🔥</div><div class="sk-name">Firebase</div><div class="sk-lvl">Advanced</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">📊</div><div class="sk-name">AdMob</div><div class="sk-lvl">Advanced</div></div>
+</div></div>
+<div class="sk-cat rv"><h3>🌐 Web</h3><div class="sk-grid">
+<div class="sk-item"><div style="font-size:1.8rem">📄</div><div class="sk-name">HTML5</div><div class="sk-lvl">Expert</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">🎨</div><div class="sk-name">CSS3</div><div class="sk-lvl">Expert</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">⚡</div><div class="sk-name">JavaScript</div><div class="sk-lvl">Advanced</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">🐘</div><div class="sk-name">PHP</div><div class="sk-lvl">Intermediate</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">🟢</div><div class="sk-name">Node.js</div><div class="sk-lvl">Intermediate</div></div>
+</div></div>
+<div class="sk-cat rv"><h3>🤖 AI & Automation</h3><div class="sk-grid">
+<div class="sk-item"><div style="font-size:1.8rem">🧠</div><div class="sk-name">OpenAI API</div><div class="sk-lvl">Advanced</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">💬</div><div class="sk-name">Chatbot</div><div class="sk-lvl">Advanced</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">🐍</div><div class="sk-name">Python</div><div class="sk-lvl">Intermediate</div></div>
+<div class="sk-item"><div style="font-size:1.8rem">⚙️</div><div class="sk-name">Automation</div><div class="sk-lvl">Advanced</div></div>
+</div></div>
+</div></section>
+
+<section class="sec" id="services" style="background:rgba(255,255,255,.006)"><div class="sec-head rv"><span class="sec-tag">Services</span><h2 class="sec-title">What I <span class="hl">Offer</span></h2><div class="sec-line"></div></div>
+<div class="srv-grid">
+<div class="srv-card rv"><div style="font-size:2rem">📱</div><h3>Android App Development</h3><p>Professional apps from development to Play Store.</p><div class="srv-tags"><span class="srv-tag">Tool Apps</span><span class="srv-tag">Islamic</span><span class="srv-tag">VPN</span></div></div>
+<div class="srv-card rv"><div style="font-size:2rem">🌐</div><h3>Website Development</h3><p>Modern responsive SEO websites.</p><div class="srv-tags"><span class="srv-tag">E-Commerce</span><span class="srv-tag">Business</span><span class="srv-tag">Portfolio</span></div></div>
+<div class="srv-card rv"><div style="font-size:2rem">💬</div><h3>AI Chatbot</h3><p>Custom AI bots with NLP and automation.</p><div class="srv-tags"><span class="srv-tag">GPT</span><span class="srv-tag">NLP</span><span class="srv-tag">Support</span></div></div>
+<div class="srv-card rv"><div style="font-size:2rem">🤖</div><h3>AI Tools & Automation</h3><p>Tools that save time and boost business.</p><div class="srv-tags"><span class="srv-tag">AI</span><span class="srv-tag">Workflow</span><span class="srv-tag">Auto</span></div></div>
+<div class="srv-card rv"><div style="font-size:2rem">🔒</div><h3>VPN Apps</h3><p>Secure fast VPN with multi-server.</p><div class="srv-tags"><span class="srv-tag">Secure</span><span class="srv-tag">Fast</span></div></div>
+<div class="srv-card rv"><div style="font-size:2rem">🕌</div><h3>Islamic Apps</h3><p>Quran, Hadith, Prayer Times, Dua.</p><div class="srv-tags"><span class="srv-tag">Quran</span><span class="srv-tag">Prayer</span></div></div>
+</div></section>
+
+<section class="sec" id="projects"><div class="sec-head rv"><span class="sec-tag">Portfolio</span><h2 class="sec-title">Featured <span class="hl">Projects</span></h2><div class="sec-line"></div></div>
+<div class="pf-filter rv">
+<button class="pf-btn active" onclick="filterP('all',this)">All</button>
+<button class="pf-btn" onclick="filterP('app',this)">📱 Apps</button>
+<button class="pf-btn" onclick="filterP('web',this)">🌐 Web</button>
+<button class="pf-btn" onclick="filterP('ai',this)">🤖 AI</button>
+<button class="pf-btn" onclick="filterP('bot',this)">💬 Bots</button>
+</div>
+<div class="pf-grid">
+<div class="pf-card rv" data-cat="app"><div class="pf-img">🔧</div><div class="pf-body"><span class="pf-type app">Android App</span><h3>Tool App</h3><p>QR, Calculator, Converter +15 tools.</p><div class="pf-tech"><span>Java</span><span>Firebase</span></div></div></div>
+<div class="pf-card rv" data-cat="app"><div class="pf-img">🕌</div><div class="pf-body"><span class="pf-type app">Android App</span><h3>Islamic App</h3><p>Quran, Hadith, Prayer, Dua, Qibla.</p><div class="pf-tech"><span>Java</span><span>API</span></div></div></div>
+<div class="pf-card rv" data-cat="app"><div class="pf-img">🔒</div><div class="pf-body"><span class="pf-type app">Android App</span><h3>VPN App</h3><p>50+ servers, one-click, secure.</p><div class="pf-tech"><span>Java</span><span>OpenVPN</span></div></div></div>
+<div class="pf-card rv" data-cat="bot"><div class="pf-img">💬</div><div class="pf-body"><span class="pf-type bot">Chatbot</span><h3>Support Bot</h3><p>NLP support bot, multi-language.</p><div class="pf-tech"><span>OpenAI</span><span>Node.js</span></div></div></div>
+<div class="pf-card rv" data-cat="web"><div class="pf-img">🛒</div><div class="pf-body"><span class="pf-type web">Website</span><h3>E-Commerce</h3><p>Full store with payment & admin.</p><div class="pf-tech"><span>PHP</span><span>MySQL</span></div></div></div>
+<div class="pf-card rv" data-cat="ai"><div class="pf-img">✍️</div><div class="pf-body"><span class="pf-type ai">AI Tool</span><h3>AI Content Generator</h3><p>Blog, social, product content.</p><div class="pf-tech"><span>OpenAI</span><span>React</span></div></div></div>
+</div></section>
+
+<section class="sec" id="journey"><div class="sec-head rv"><span class="sec-tag">Journey</span><h2 class="sec-title">Professional <span class="hl">Timeline</span></h2><div class="sec-line"></div></div>
+<div class="tl">
+<div class="tl-item rv"><span class="tl-year">2017</span><h4>🚀 Entered Digital World</h4><p>Started web design & programming.</p></div>
+<div class="tl-item rv"><span class="tl-year">2021</span><h4>💼 Professional Start</h4><p>Tool Apps, Islamic Apps, client work.</p></div>
+<div class="tl-item rv"><span class="tl-year">2022-2023</span><h4>📈 Growth</h4><p>VPN, E-commerce, AI, Chatbots.</p></div>
+<div class="tl-item rv"><span class="tl-year">2024-2025</span><h4>🚀 Advanced AI</h4><p>AI integration & international clients.</p></div>
+<div class="tl-item rv"><span class="tl-year">2026-Present</span><h4>🎯 Current Era</h4><p>Next-gen apps, SaaS, AI platforms.</p></div>
+</div></section>
+
+<section class="sec" id="faq" style="background:rgba(255,255,255,.006)"><div class="sec-head rv"><span class="sec-tag">FAQ</span><h2 class="sec-title">Frequently Asked <span class="hl">Questions</span></h2><div class="sec-line"></div></div>
+<div class="faq-wrap">
+<div class="faq-item rv"><div class="faq-q" onclick="toggleF(this)"><span>What apps do you build?</span><span>+</span></div><div class="faq-a"><p>Tool, Islamic, VPN, Business Apps with Play Store publishing.</p></div></div>
+<div class="faq-item rv"><div class="faq-q" onclick="toggleF(this)"><span>Can you build AI chatbots?</span><span>+</span></div><div class="faq-a"><p>Yes, with OpenAI/GPT, NLP, multi-platform.</p></div></div>
+<div class="faq-item rv"><div class="faq-q" onclick="toggleF(this)"><span>Timeline?</span><span>+</span></div><div class="faq-a"><p>App 2-4 weeks, Website 1-2 weeks, AI 4-8 weeks.</p></div></div>
+</div></section>
+
+<div class="cta-sec"><div class="cta-inner rv"><h2>Have a Project in <span class="grad">Mind?</span></h2><p>App, Website, AI Bot or Automation - let's build it.</p><div class="cta-btns"><a href="#contact" class="btn-p">Start Project →</a></div></div></div>
+
+<section class="sec" id="contact"><div class="sec-head rv"><span class="sec-tag">Contact</span><h2 class="sec-title">Let's Work <span class="hl">Together</span></h2><div class="sec-line"></div></div>
+<div class="ct-grid">
+<div class="rv"><h3 style="color:#fff;margin-bottom:14px">Let's Connect 📬</h3>
+<div class="ct-item"><div>📧</div><div><div style="font-size:.7rem;color:#555">EMAIL</div><div>contact@naeim.ami.bd</div></div></div>
+<div class="ct-item"><div>🌐</div><div><div style="font-size:.7rem;color:#555">WEBSITE</div><div>naeim.ami.bd</div></div></div>
+<div class="ct-item"><div>📍</div><div><div style="font-size:.7rem;color:#555">LOCATION</div><div>Bangladesh</div></div></div>
+</div>
+<form class="ct-form rv" id="ctForm" onsubmit="sendToTelegram(event)">
+<div class="fg-row"><div class="fg"><label>Name *</label><input id="senderName" required placeholder="Your name"/></div><div class="fg"><label>Email *</label><input id="senderEmail" type="email" required placeholder="Your email"/></div></div>
+<div class="fg"><label>Service</label><select id="senderService"><option>Android App</option><option>Website</option><option>AI Chatbot</option><option>AI Tools</option><option>Other</option></select></div>
+<div class="fg"><label>Message *</label><textarea id="senderMsg" required placeholder="Your project..."></textarea></div>
+<button class="btn-send" id="submitBtn" type="submit">Send Message ✉️</button>
+</form>
+</div></section>
+
+<footer class="ft"><div class="ft-main"><div class="ft-grid">
+<div><div class="ft-logo-t">NAEIM.</div><p style="color:#666;font-size:.82rem;margin:10px 0">App & Web Developer since 2017.</p></div>
+<div class="ft-col"><h4>Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
+<div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Android</a></li><li><a href="#services">Web</a></li><li><a href="#services">AI Bots</a></li></ul></div>
+<div class="ft-col"><h4>Contact</h4><ul><li><a href="mailto:contact@naeim.ami.bd">Email Me</a></li><li><a href="https://naeim.ami.bd">Website</a></li></ul></div>
+</div></div>
+<div class="ft-bottom"><div style="font-size:.75rem;color:#555">© 2026 Naeim. Crafted with 💚 in Bangladesh</div><button onclick="toTop()" style="background:none;border:none;color:#00f5a0;cursor:pointer">Top ↑</button></div>
+</footer>
+
+<button class="btt" id="btt" onclick="toTop()">↑</button>
+
+<script>
+// ===== CONFIG - এখানে তোমার Bot Token বসাও =====
+const TELEGRAM_BOT_TOKEN = "PASTE_YOUR_BOT_TOKEN_HERE";
+const TELEGRAM_CHAT_ID = "PASTE_YOUR_CHAT_ID_HERE";
+
+// Preloader - guarantee hide (infinite loading fix)
+function hidePre(){var p=document.getElementById('preloader');if(p) p.classList.add('hidden');}
+window.addEventListener('load',function(){setTimeout(hidePre,1200);});
+setTimeout(hidePre,3500); // fallback
+
+// Particles
+(function(){var b=document.getElementById('bgAnim');for(var i=0;i<25;i++){var p=document.createElement('div');p.className='p';p.style.left=Math.random()*100+'%';p.style.animationDelay=Math.random()*12+'s';b.appendChild(p);}})();
+
+// Nav scroll
+window.addEventListener('scroll',function(){var n=document.getElementById('navbar');if(window.scrollY>50)n.classList.add('scrolled');else n.classList.remove('scrolled');var b=document.getElementById('btt');if(window.scrollY>400)b.classList.add('show');else b.classList.remove('show');reveal();});
+
+// Menu
+function toggleM(){document.getElementById('navLinks').classList.toggle('active');document.getElementById('menuBtn').classList.toggle('active');}
+function closeM(){document.getElementById('navLinks').classList.remove('active');document.getElementById('menuBtn').classList.remove('active');}
+
+// Smooth
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-70,behavior:'smooth'});}});});
+
+// Typing
+(function(){var t=['Building Android Apps','Developing Websites','Creating AI Chatbots','E-Commerce Solutions','Automation Systems'];var ti=0,ci=0,del=false;var el=document.getElementById('typeText');function type(){var c=t[ti];el.textContent=del?c.substring(0,ci-1):c.substring(0,ci+1);ci+=del?-1:1;var d=del?35:70;if(!del&&ci===c.length){d=2000;del=true;}else if(del&&ci===0){del=false;ti=(ti+1)%t.length;d=400;}setTimeout(type,d);}type();})();
+
+// Reveal
+function reveal(){document.querySelectorAll('.rv').forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight-60)el.classList.add('on');});}
+window.addEventListener('load',function(){setTimeout(reveal,200);});reveal();
+
+// Counter
+(function(){var done=false;function cnt(){if(done)return;document.querySelectorAll('.cnt-num,.st-num').forEach(function(n){var r=n.getBoundingClientRect();if(r.top<window.innerHeight){done=true;document.querySelectorAll('.cnt-num,.st-num').forEach(function(c){var tg=parseInt(c.dataset.target);var cur=0;function up(){cur+=tg/50;if(cur<tg){c.textContent=Math.ceil(cur)+'+';requestAnimationFrame(up);}else c.textContent=tg+'+';}up();});}});}window.addEventListener('scroll',cnt);window.addEventListener('load',function(){setTimeout(cnt,500);});})();
+
+function filterP(cat,btn){document.querySelectorAll('.pf-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');document.querySelectorAll('.pf-card').forEach(function(c){c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';});}
+function toggleF(el){var it=el.parentElement;var a=it.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active')});if(!a)it.classList.add('active');}
+function toTop(){window.scrollTo({top:0,behavior:'smooth'});}
+
+// Telegram Send - Email এর বদলে সরাসরি Telegram এ মেসেজ যাবে
+function sendToTelegram(e){
+e.preventDefault();
+var btn=document.getElementById('submitBtn');var orig=btn.textContent;
+var name=document.getElementById('senderName').value;
+var email=document.getElementById('senderEmail').value;
+var service=document.getElementById('senderService').value;
+var msg=document.getElementById('senderMsg').value;
+var text="New Inquiry%0A%0AName: "+encodeURIComponent(name)+"%0AEmail: "+encodeURIComponent(email)+"%0AService: "+encodeURIComponent(service)+"%0AMessage: "+encodeURIComponent(msg);
+btn.textContent='Sending...';
+fetch("https://api.telegram.org/bot"+TELEGRAM_BOT_TOKEN+"/sendMessage?chat_id="+TELEGRAM_CHAT_ID+"&text="+text+"&parse_mode=HTML")
+.then(function(r){if(r.ok){btn.textContent='Sent Successfully!';document.getElementById('ctForm').reset();}else{btn.textContent='Failed! Check Token';}setTimeout(function(){btn.textContent=orig;},2500);})
+.catch(function(){btn.textContent='Error! Try Again';setTimeout(function(){btn.textContent=orig;},2500);});
+}
+</script>
+</body>
+</html>
